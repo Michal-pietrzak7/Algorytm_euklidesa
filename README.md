@@ -39,7 +39,19 @@ Algorytm Euklidesa to jeden z najstarszych znanych algorytmów matematycznych, k
 Oba algorytmy dają ten sam wynik \( NWD(48, 18) = 6 \), ale wersja optymalna wymaga mniej operacji.  
 
 ---
+## Obliczanie NWW (Najmniejsza Wspólna Wielokrotność)
 
+Najmniejsza Wspólna Wielokrotność (NWW) dwóch liczb naturalnych \\( a \\) i \\( b \\) to najmniejsza liczba, która jest wielokrotnością zarówno \\( a \\), jak i \\( b \\).
+
+### Zależność między NWW i NWD:
+
+\\[ NWW(a, b) = \\frac{a \\cdot b}{NWD(a, b)} \\]
+
+### Przykład: Wyznacz NWW(48, 18):  
+1. Najpierw wyznacz \\( NWD(48, 18) = 6 \\) (np. za pomocą Algorytmu Euklidesa).  
+2. Następnie oblicz \\( NWW \\):  
+   \\[ NWW(48, 18) = \\frac{48 \\cdot 18}{6} = 144 \\]  
+3. Wynik: \\( NWW(48, 18) = 144 \\).
 ## 4. Implementacja w Pythonie  
 
 ### Optymalny algorytm rekurencyjny:  
