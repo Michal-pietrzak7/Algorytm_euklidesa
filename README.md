@@ -76,7 +76,8 @@ def nwd_iter(a, b):
    - \( (a, b) = (1001, 847) \)  
    - \( (a, b) = (3600, 1260) \)  
 
-2. Porównaj czas działania obu wersji dla dużych liczb, np. \( (a, b) = (123456, 987654) \).  
+2.  Stwórz funkcję w Pythonie, która daną obliczy NWW i NWD dla podanej pary liczb.
+    Do wykonania zadania wykorzystaj niezoptymalizowany algorytm Euklidesa .
 
 ---
 
