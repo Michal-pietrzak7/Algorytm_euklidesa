@@ -52,6 +52,7 @@ Najmniejsza Wspólna Wielokrotność (NWW) dwóch liczb naturalnych \\( a \\) i 
 2. Następnie oblicz \\( NWW \\):  
    \\[ NWW(48, 18) = \\frac{48 \\cdot 18}{6} = 144 \\]  
 3. Wynik: \\( NWW(48, 18) = 144 \\).
+
 ## 4. Implementacja w Pythonie  
 
 ### Optymalny algorytm rekurencyjny:  
@@ -95,3 +96,10 @@ def nwd_iter(a, b):
 
 ## 7. Podsumowanie  
 Algorytm Euklidesa w obu wersjach jest niezwykle prosty i skuteczny. Niezoptymalizowana wersja (odejmowanie) jest dobrym punktem startowym dla początkujących, ale w praktyce zdecydowanie zaleca się stosowanie wersji optymalnej (modulo) ze względu na jej wydajność.
+
+
+
+
+$$
+\frac{n1}{d1} = \frac{n2}{d2}
+$$
