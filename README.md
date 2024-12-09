@@ -129,7 +129,7 @@ def nwd_iter(a, b):
 
 ## 6. Złożoność obliczeniowa  
 
-| Algorytm                    | Złożoność czasowa               
+| Algorytm                    | Złożoność obliczeniowa              
 |-----------------------------|---------------------------------|
 | **Niezoptymalizowany**      | \( O(max(a, b)) \)            |         
 | **Optymalny (modulo)**      | \( O(log(min(a, b))) \)      
