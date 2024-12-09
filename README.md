@@ -101,8 +101,3 @@ def nwd_iter(a, b):
 Algorytm Euklidesa w obu wersjach jest niezwykle prosty i skuteczny. Niezoptymalizowana wersja (odejmowanie) jest dobrym punktem startowym dla początkujących, ale w praktyce zdecydowanie zaleca się stosowanie wersji optymalnej (modulo) ze względu na jej wydajność.
 
 
-
-
-$$
-\frac{n1}{d1} = \frac{n2}{d2}
-$$
