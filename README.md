@@ -32,9 +32,9 @@ Algorytm Euklidesa to jeden z najstarszych znanych algorytmów matematycznych, k
 6. Wynik: \( NWD(48, 18) = 6 \).  
 
 #### Optymalny algorytm (modulo):  
-1. \( a = 48, b = 18 \): \( a \mod b = 48 \mod 18 = 12 \), więc \( a = 18, b = 12 \).  
-2. \( a = 18, b = 12 \): \( a \mod b = 18 \mod 12 = 6 \), więc \( a = 12, b = 6 \).  
-3. \( a = 12, b = 6 \): \( a \mod b = 12 \mod 6 = 0 \), więc \( NWD = b = 6 \).  
+1. \( a = 48, b = 18 \): \( a mod b  = 48 mod 18 = 12 ), więc \( a = 18, b = 12 \).  
+2. \( a = 18, b = 12 \): \( a mod b  = 18 mod 12 = 6 ), więc \( a = 12, b = 6 \).  
+3. \( a = 12, b = 6 \): \( a mod b  = 12 mod 6 = 0 ), więc \( NWD = b = 6 \).  
 
 Oba algorytmy dają ten sam wynik \( NWD(48, 18) = 6 \), ale wersja optymalna wymaga mniej operacji.  
 
