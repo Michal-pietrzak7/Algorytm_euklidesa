@@ -69,6 +69,43 @@ Dlatego `NWD(a, b) = NWD(b, r)`.
 Weźmy `a = 48` i `b = 18`.
 
 ### Krok 1: Znajdź resztę `r = a % b`
+r = 48 % 18 = 48 - 2 * 18 = 12
+Reszta to `12`.
+
+Pokażmy, że dzielniki wspólne `48` i `18` są takie same jak dla `18` i `12`:
+
+- Dzielniki `48`: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48  
+- Dzielniki `18`: 1, 2, 3, 6, 9, 18  
+- Wspólne dzielniki `48` i `18`: 1, 2, 3, 6  
+
+Wynik: `NWD(48, 18) = 6`.
+
+### Krok 2: Przejdź do `b = 18` i `r = 12`
+Znajdź resztę `r = b % r`:
+r = 18 % 12 = 18 - 1 * 12 = 6
+Reszta to `6`.
+
+Sprawdźmy dzielniki:
+- Dzielniki `18`: 1, 2, 3, 6, 9, 18  
+- Dzielniki `12`: 1, 2, 3, 4, 6, 12  
+- Wspólne dzielniki `18` i `12`: 1, 2, 3, 6  
+
+Wynik: `NWD(18, 12) = 6`.
+
+### Krok 3: Przejdź do `b = 12` i `r = 6`
+Znajdź resztę `r = b % r`:
+r = 12 % 6 = 12 - 2 * 6 = 0
+Reszta to `0`.
+
+Sprawdźmy dzielniki:
+- Dzielniki `12`: 1, 2, 3, 4, 6, 12  
+- Dzielniki `6`: 1, 2, 3, 6  
+- Wspólne dzielniki `12` i `6`: 1, 2, 3, 6  
+
+Wynik: `NWD(12, 6) = 6`.
+
+### Krok 4: Zakończenie
+Gdy `r = 0`, proces kończy się, a wynik to `NWD(6, 0) = 6`.
 ---
 ## 5. Implementacja w Pythonie  
 
