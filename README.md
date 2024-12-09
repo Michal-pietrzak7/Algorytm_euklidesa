@@ -55,50 +55,21 @@ NWW(a, b) = (a * b) / NWD(a, b)
 3. Wynik: NWW(48, 18) = 144
 
 ---
-## Dowód poprawności algorytmu Euklidesa
+# Wyjaśnienie poprawności Algorytmu Euklidesa
 
 ## Cel
-Chcemy pokazać, dlaczego \\( \\text{NWD}(a, b) = \\text{NWD}(b, a \\mod b) \\). 
-Innymi słowy, dlaczego zamiana \\(a\\) na resztę z dzielenia \\(a \\mod b\\) wciąż prowadzi do poprawnego wyniku.
+Chcemy pokazać, dlaczego `NWD(a, b) = NWD(b, a % b)`. Innymi słowy, dlaczego zamiana `a` na resztę z dzielenia `a % b` wciąż prowadzi do poprawnego wyniku.
 
 ## Intuicyjne wyjaśnienie
-Jeśli \\(d\\) jest największym wspólnym dzielnikiem \\(a\\) i \\(b\\), to \\(d\\) dzieli zarówno \\(a\\), jak i \\(b\\). 
-Reszta \\(r = a \\mod b\\) jest różnicą \\(a\\) i wielokrotności \\(b\\), co oznacza, że \\(d\\) musi także dzielić \\(r\\). 
-Dlatego \\( \\text{NWD}(a, b) = \\text{NWD}(b, r) \\).
+Jeśli `d` jest największym wspólnym dzielnikiem `a` i `b`, to `d` dzieli zarówno `a`, jak i `b`.  
+Reszta `r = a % b` jest różnicą `a` i wielokrotności `b`, co oznacza, że `d` musi także dzielić `r`.  
+Dlatego `NWD(a, b) = NWD(b, r)`.
 
 ## Przykład na liczbach
-Weźmy \\(a = 48\\) i \\(b = 18\\).
+Weźmy `a = 48` i `b = 18`.
 
-### Krok 1: Znajdź resztę \\(r = a \\mod b\\)
-\\[ r = 48 \\mod 18 = 48 - 2 \\cdot 18 = 12 \\]
-
-Reszta to \\(12\\).
-
-### Krok 2: Sprawdź dzielniki
-#### Dzielniki dla \\(48\\) i \\(18\\):
-- Dzielniki \\(48\\): \\(1, 2, 3, 4, 6, 8, 12, 16, 24, 48\\)
-- Dzielniki \\(18\\): \\(1, 2, 3, 6, 9, 18\\)
-
-Wspólne dzielniki: \\(1, 2, 3, 6\\), więc \\( \\text{NWD}(48, 18) = 6 \\).
-
-#### Dzielniki dla \\(18\\) i \\(12\\):
-- Dzielniki \\(12\\): \\(1, 2, 3, 4, 6, 12\\)
-- Wspólne dzielniki: \\(1, 2, 3, 6\\), więc \\( \\text{NWD}(18, 12) = 6 \\).
-
-### Krok 3: Powtórz proces dla \\(12\\) i \\(6\\)
-Znajdź resztę \\(r = 18 \\mod 12\\):
-\\[ r = 18 \\mod 12 = 18 - 1 \\cdot 12 = 6 \\]
-
-#### Sprawdź \\( \\text{NWD}(12, 6) \\):
-- Dzielniki \\(12\\): \\(1, 2, 3, 4, 6, 12\\)
-- Dzielniki \\(6\\): \\(1, 2, 3, 6\\)
-
-Wspólne dzielniki: \\(1, 2, 3, 6\\), więc \\( \\text{NWD}(12, 6) = 6 \\).
-
-### Stan końcowy
-Gdy \\(r = 0\\), proces kończy się, a \\( \\text{NWD}(6, 0) = 6 \\).
-
-"""
+### Krok 1: Znajdź resztę `r = a % b`
+---
 ## 5. Implementacja w Pythonie  
 
 ### Optymalny algorytm rekurencyjny:  
